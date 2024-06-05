@@ -88,7 +88,7 @@ header {
 }
 
 .compress input[type="submit"] {
-    display: none;
+    display: flex;
     gap: 20px;
 }
 
@@ -142,3 +142,8 @@ header {
     background-color: black;
     color: white;
 }
+
+.result_image button a{
+    text-decoration: none;
+}
+
