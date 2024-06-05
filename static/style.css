@@ -1,0 +1,144 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding-left: 100px;
+    border: 1px solid black;
+    max-width: 100%;
+    padding-top: 0;
+}
+
+.container {
+    margin-top: 0px;
+    padding: 10px 100px;
+    max-width: 100%;
+}
+
+.container h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.encode {
+    text-align: center;
+}
+
+.encode label{
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.encode textarea {
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.encode input {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.encode input:hover {
+    background-color: black;
+    color: white;
+}
+
+.compress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.compress label{
+    background-color: gray;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.compress label:hover{
+    background-color: black;
+    color: white;
+}
+
+.compress input[type="file"] {
+    display: none;
+}
+
+.compress input[type="submit"] {
+    display: none;
+    gap: 20px;
+}
+
+
+.subm{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subm:hover {
+    background-color: black;
+    color: white;
+}
+
+.result_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result_image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result_image img{
+    width: 600px;
+    border-radius: 20px;
+}
+
+.result_image button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.result_image button:hover{
+    background-color: black;
+    color: white;
+}

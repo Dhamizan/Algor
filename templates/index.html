@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Aplikasi Dewa</h1>
+    </header>
+    
+    <div class="container">
+        <h2>Text Encode</h2>
+        <form action="/encode" method="post" class="encode">
+            <label for="text">ENCODE</label><br>
+            <textarea name="text" rows="6" cols="50"></textarea><br>
+            <input type="submit" value="Encode Text">
+        </form>
+        {% if encoded_text %}
+        <div class="result_text">
+            <h3>Encoded Text:</h3>
+            <p>{{ encoded_text }}</p>
+            <h3>Codebook:</h3>
+            <ul>
+                {% for char, code in codebook.items() %}
+                    <li>{{ char }}: {{ code }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <h2>Image Compression</h2>
+        <form action="/compress_image" method="post" enctype="multipart/form-data" class="compress">
+            <label for="image">UPLOAD GAMBAR</label><br>
+            <input type="file" name="image" id="image" accept="image/*"><br>
+            <input type="submit" value="Compress Image" class="subm">
+        </form>
+        {% if compressed_image %}
+        <div class="result_image">
+            <h3>Compressed:</h3>
+            <img src="data:image/jpeg;base64,{{ compressed_image }}" alt="Compressed Image">
+            <br>
+            <a href="{{ url_for('download_file', filename=image_name) }}"><button>Download Image</button></a>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
